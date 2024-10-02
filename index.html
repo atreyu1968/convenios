@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de Convenios Colectivos</title>
+    <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Fuente externa -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +16,13 @@
 
         <!-- Pantalla del juego -->
         <div id="game" style="display:none;">
+            <!-- Puntuación y temporizador -->
+            <div id="scoreContainer">
+                <p>Puntuación: <span id="score">0</span></p>
+            </div>
             <div id="timer">Tiempo: <span id="time">30</span> segundos</div>
+
+            <!-- Información de la pregunta -->
             <h2 id="company-info"></h2>
             <p id="job-info"></p>
             <div id="choices"></div>
@@ -26,18 +34,15 @@
         <div id="result" style="display:none;">
             <h2 id="final-result"></h2>
             <p id="final-score"></p>
-        </div>
-
-        <!-- Puntuación -->
-        <div id="scoreContainer" style="display:none;">
-            <p>Puntuación: <span id="score">0</span></p>
+            <button id="restartButton">Jugar de Nuevo</button>
         </div>
 
         <!-- Botón de inicio -->
         <button id="startButton">Comenzar</button>
     </div>
 
-    <!-- Script -->
+    <!-- Enlace al archivo JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
+
