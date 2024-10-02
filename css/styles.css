@@ -1,1 +1,88 @@
+/* Estilo general */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+/* Instrucciones */
+p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+/* Botones generales */
+button {
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Botones de opciones */
+#choices button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  border: 1px solid #bdc3c7;
+  transition: background-color 0.3s ease;
+}
+
+#choices button:hover {
+  background-color: #bdc3c7;
+}
+
+/* Información de la empresa y trabajo */
+#company-info, #job-info {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+/* Siguiente pregunta botón */
+#nextButton {
+  margin-top: 20px;
+}
+
+/* Resultado final */
+#final-result {
+  font-size: 1.5rem;
+  color: #2ecc71;
+}
+
 
