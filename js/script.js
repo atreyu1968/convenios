@@ -11,6 +11,7 @@ const finalScore = document.getElementById('final-score');
 const timerElement = document.getElementById('time');
 const scoreElement = document.getElementById('score');
 const scoreContainer = document.getElementById('scoreContainer');
+const restartButton = document.getElementById('restartButton');
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
@@ -19,6 +20,7 @@ let timeLeft = 30;
 let timerInterval;
 
 const cases = [
+    // Aquí van los 50 supuestos
     {
         company: "Restaurante La Palma",
         job: "Camarero",
@@ -37,9 +39,10 @@ const cases = [
             { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
         ]
     },
-    // Añade más casos aquí
+    // Añade los otros 48 casos aquí siguiendo el mismo formato
 ];
 
+// Eventos
 startButton.addEventListener('click', startGame);
 continueButton.addEventListener('click', () => {
     currentQuestionIndex++;
@@ -49,17 +52,23 @@ continueButton.addEventListener('click', () => {
         endGame();
     }
 });
+restartButton.addEventListener('click', restartGame);
 
 function startGame() {
     startButton.style.display = 'none';
+    resultContainer.style.display = 'none';
     gameContainer.style.display = 'block';
     scoreContainer.style.display = 'block';
+    currentQuestionIndex = 0;
+    correctAnswers = 0;
+    score = 0;
+    scoreElement.textContent = score;
     setNextQuestion();
-    startTimer();
 }
 
 function setNextQuestion() {
     resetState();
+    startTimer();
     const currentCase = cases[currentQuestionIndex];
     companyInfo.textContent = currentCase.company;
     jobInfo.textContent = `Puesto de trabajo: ${currentCase.job}`;
@@ -72,47 +81,45 @@ function setNextQuestion() {
 }
 
 function resetState() {
+    clearInterval(timerInterval);
     feedback.textContent = '';
     feedback.classList.remove('correct', 'wrong');
     continueButton.style.display = 'none';
     while (choicesContainer.firstChild) {
         choicesContainer.removeChild(choicesContainer.firstChild);
     }
-    resetTimer();
+    timeLeft = 30;
+    timerElement.textContent = timeLeft;
 }
 
 function selectAnswer(correct) {
-    clearInterval(timerInterval); // Detener el temporizador cuando se selecciona una respuesta
+    clearInterval(timerInterval);
+    Array.from(choicesContainer.children).forEach(button => {
+        button.disabled = true;
+    });
     if (correct) {
         feedback.textContent = "¡Correcto!";
         feedback.classList.add('correct');
-        score += 10; // Sumar puntos por respuesta correcta
+        score += 10;
         correctAnswers++;
     } else {
         feedback.textContent = "¡Incorrecto!";
         feedback.classList.add('wrong');
-        score -= 5; // Restar puntos por respuesta incorrecta
+        score -= 5;
     }
-    scoreElement.textContent = score; // Actualizar puntuación en pantalla
-    continueButton.style.display = 'block'; // Mostrar botón "Continuar"
+    scoreElement.textContent = score;
+    continueButton.style.display = 'block';
 }
 
 function startTimer() {
-    timeLeft = 30; // Tiempo por pregunta
-    timerElement.textContent = timeLeft;
     timerInterval = setInterval(() => {
         timeLeft--;
         timerElement.textContent = timeLeft;
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            selectAnswer(false); // Si el tiempo se acaba, cuenta como incorrecto
+            selectAnswer(false);
         }
     }, 1000);
-}
-
-function resetTimer() {
-    clearInterval(timerInterval); // Detener cualquier temporizador activo
-    startTimer(); // Reiniciar el temporizador
 }
 
 function endGame() {
@@ -120,4 +127,9 @@ function endGame() {
     resultContainer.style.display = 'block';
     finalResult.textContent = `¡Juego terminado! Has acertado ${correctAnswers} de ${cases.length} convenios.`;
     finalScore.textContent = `Tu puntuación final es: ${score} puntos.`;
+}
+
+function restartGame() {
+    resultContainer.style.display = 'none';
+    startButton.style.display = 'block';
 }
