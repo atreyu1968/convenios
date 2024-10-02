@@ -494,6 +494,8 @@ function startGame() {
     correctAnswers = 0;
     score = 0;
     scoreElement.textContent = score;
+    
+    shuffleArray(cases); // Barajar las preguntas
     setNextQuestion();
 }
 
@@ -503,6 +505,9 @@ function setNextQuestion() {
     const currentCase = cases[currentQuestionIndex];
     companyInfo.textContent = currentCase.company;
     jobInfo.textContent = `Puesto de trabajo: ${currentCase.job}`;
+    
+    shuffleArray(currentCase.options); // Barajar las respuestas
+    
     currentCase.options.forEach(option => {
         const button = document.createElement('button');
         button.textContent = option.text;
@@ -566,3 +571,9 @@ function restartGame() {
     startButton.style.display = 'block';
 }
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
