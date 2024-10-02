@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Convenios Colectivos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bienvenido al juego de convenios colectivos</h1>
+    <p>Elige el convenio adecuado en función de la empresa y el puesto.</p>
+    <button id="startButton">Comenzar</button>
+
+    <div id="game" style="display:none;">
+      <div id="question-container">
+        <h2 id="company-info"></h2>
+        <p id="job-info"></p>
+        <div id="choices"></div>
+      </div>
+      <button id="nextButton" style="display:none;">Siguiente</button>
+    </div>
+
+    <div id="result" style="display:none;">
+      <h2 id="final-result"></h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
