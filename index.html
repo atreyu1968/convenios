@@ -4,44 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de Convenios Colectivos</title>
-    <!-- Enlace al archivo CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Fuente externa -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Añade tus estilos aquí */
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Juego de Convenios Colectivos</h1>
-        <p id="instructions">Encuentra el convenio colectivo correcto según el puesto de trabajo.</p>
+    <div id="game-container">
+        <button id="startButton">Comenzar el Juego</button>
 
-        <!-- Pantalla del juego -->
-        <div id="game" style="display:none;">
-            <!-- Puntuación y temporizador -->
-            <div id="scoreContainer">
-                <p>Puntuación: <span id="score">0</span></p>
-            </div>
-            <div id="timer">Tiempo: <span id="time">30</span> segundos</div>
-
-            <!-- Información de la pregunta -->
-            <h2 id="company-info"></h2>
-            <p id="job-info"></p>
+        <div id="game" style="display: none;">
+            <div id="company-info"></div>
+            <div id="job-info"></div>
             <div id="choices"></div>
-            <div id="feedback" class="feedback"></div>
-            <button id="continueButton" style="display:none;">Continuar</button>
+            <div id="feedback"></div>
+            <button id="continueButton" style="display: none;">Continuar</button>
         </div>
 
-        <!-- Resultado final -->
-        <div id="result" style="display:none;">
-            <h2 id="final-result"></h2>
+        <div id="scoreContainer" style="display: none;">
+            <p>Puntuación: <span id="score">0</span></p>
+            <p>Tiempo restante: <span id="time">30</span> segundos</p>
+        </div>
+
+        <div id="result" style="display: none;">
+            <p id="final-result"></p>
             <p id="final-score"></p>
-            <button id="restartButton">Jugar de Nuevo</button>
+            <p id="final-time"></p> <!-- Mostrar tiempo total -->
+            <button id="restartButton" style="display: none;">Reiniciar</button>
         </div>
-
-        <!-- Botón de inicio -->
-        <button id="startButton">Comenzar</button>
     </div>
 
-    <!-- Enlace al archivo JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
