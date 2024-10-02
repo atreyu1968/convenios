@@ -472,7 +472,6 @@ const cases = [
     }
 ];
 
-
 // Eventos
 startButton.addEventListener('click', startGame);
 continueButton.addEventListener('click', () => {
@@ -490,7 +489,7 @@ function startGame() {
     resultContainer.style.display = 'none';
     gameContainer.style.display = 'block';
     scoreContainer.style.display = 'block';
-    restartButton.style.display = 'none'; // Ocultar botón de reinicio al comenzar el juego
+    restartButton.style.display = 'none';
     currentQuestionIndex = 0;
     correctAnswers = 0;
     score = 0;
@@ -500,9 +499,8 @@ function startGame() {
 
 function setNextQuestion() {
     resetState();
-    startTimer(); // Iniciar el temporizador con cada nueva pregunta
+    startTimer();
     const currentCase = cases[currentQuestionIndex];
-    console.log(currentCase); // Verificar qué pregunta se está cargando
     companyInfo.textContent = currentCase.company;
     jobInfo.textContent = `Puesto de trabajo: ${currentCase.job}`;
     currentCase.options.forEach(option => {
@@ -558,7 +556,7 @@ function startTimer() {
 function endGame() {
     gameContainer.style.display = 'none';
     resultContainer.style.display = 'block';
-    restartButton.style.display = 'block'; // Mostrar el botón de reinicio
+    restartButton.style.display = 'block';
     finalResult.textContent = `¡Juego terminado! Has acertado ${correctAnswers} de ${cases.length} convenios.`;
     finalScore.textContent = `Tu puntuación final es: ${score} puntos.`;
 }
@@ -567,3 +565,4 @@ function restartGame() {
     resultContainer.style.display = 'none';
     startButton.style.display = 'block';
 }
+
