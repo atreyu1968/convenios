@@ -38,8 +38,440 @@ const cases = [
             { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
         ]
     },
-    // Añade los otros 48 casos aquí siguiendo el mismo formato
+    {
+        company: "Construcciones Garcia S.L.",
+        job: "Albañil",
+        options: [
+            { text: "Convenio Colectivo del Sector de la Construcción", correct: true },
+            { text: "Convenio Colectivo de la Industria Metálica", correct: false },
+            { text: "Convenio Colectivo de la Industria Química", correct: false }
+        ]
+    },
+    {
+        company: "Clínica Dental Rodríguez",
+        job: "Higienista Dental",
+        options: [
+            { text: "Convenio Colectivo de Clínicas Dentales", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Supermercados Lopez",
+        job: "Cajero",
+        options: [
+            { text: "Convenio Colectivo de Comercio Minorista", correct: true },
+            { text: "Convenio Colectivo de Hostelería", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Metalúrgica Castilla",
+        job: "Operario de Producción",
+        options: [
+            { text: "Convenio Colectivo de la Industria Metálica", correct: true },
+            { text: "Convenio Colectivo del Sector de la Construcción", correct: false },
+            { text: "Convenio Colectivo de la Industria Química", correct: false }
+        ]
+    },
+    {
+        company: "Academia Formativa Canarias",
+        job: "Profesor de Inglés",
+        options: [
+            { text: "Convenio Colectivo de la Enseñanza Privada", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Hostelería", correct: false }
+        ]
+    },
+    {
+        company: "Servicios de Limpieza Santa Cruz",
+        job: "Limpiador",
+        options: [
+            { text: "Convenio Colectivo de Limpieza de Edificios", correct: true },
+            { text: "Convenio Colectivo de Hostelería", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Transportes Alonso S.L.",
+        job: "Conductor de Camión",
+        options: [
+            { text: "Convenio Colectivo de Transportes por Carretera", correct: true },
+            { text: "Convenio Colectivo del Sector de la Construcción", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Granja Avícola La Esperanza",
+        job: "Técnico Agrícola",
+        options: [
+            { text: "Convenio Colectivo del Sector Agrario", correct: true },
+            { text: "Convenio Colectivo de la Industria Alimentaria", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Banco Canarias S.A.",
+        job: "Administrativo",
+        options: [
+            { text: "Convenio Colectivo de Banca", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Pescadería La Mar",
+        job: "Dependiente",
+        options: [
+            { text: "Convenio Colectivo de Comercio Minorista", correct: true },
+            { text: "Convenio Colectivo de Hostelería", correct: false },
+            { text: "Convenio Colectivo de Industrias Pesqueras", correct: false }
+        ]
+    },
+    {
+        company: "Fábrica de Quesos El Cabrero",
+        job: "Operario de Producción",
+        options: [
+            { text: "Convenio Colectivo de la Industria Alimentaria", correct: true },
+            { text: "Convenio Colectivo del Sector Agrario", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Gráficas Tenerife",
+        job: "Diseñador Gráfico",
+        options: [
+            { text: "Convenio Colectivo del Sector de Artes Gráficas", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Centro Deportivo Las Palmas",
+        job: "Monitor de Gimnasio",
+        options: [
+            { text: "Convenio Colectivo de Instalaciones Deportivas", correct: true },
+            { text: "Convenio Colectivo de Hostelería", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Automecánica Pérez",
+        job: "Mecánico",
+        options: [
+            { text: "Convenio Colectivo del Metal", correct: true },
+            { text: "Convenio Colectivo del Sector de la Construcción", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Librería La Casa del Libro",
+        job: "Dependiente",
+        options: [
+            { text: "Convenio Colectivo de Comercio Minorista", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Hostelería", correct: false }
+        ]
+    },
+    {
+        company: "Escuela Infantil Los Pequeños",
+        job: "Educador Infantil",
+        options: [
+            { text: "Convenio Colectivo de Centros de Educación Infantil", correct: true },
+            { text: "Convenio Colectivo de Enseñanza Privada", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Consultoría Fiscal ABC",
+        job: "Asesor Fiscal",
+        options: [
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: true },
+            { text: "Convenio Colectivo de Consultoras Jurídicas", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Farmacia Salud y Bienestar",
+        job: "Técnico de Farmacia",
+        options: [
+            { text: "Convenio Colectivo de Oficinas de Farmacia", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Centro Comercial Atlántico",
+        job: "Vigilante de Seguridad",
+        options: [
+            { text: "Convenio Colectivo de Empresas de Seguridad Privada", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Agencia de Viajes El Mundo",
+        job: "Agente de Viajes",
+        options: [
+            { text: "Convenio Colectivo de Agencias de Viaje", correct: true },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Jardinería Las Palmeras",
+        job: "Jardinero",
+        options: [
+            { text: "Convenio Colectivo de Jardinería", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Hostelería", correct: false }
+        ]
+    },
+    {
+        company: "Estudio de Arquitectura Omega",
+        job: "Arquitecto",
+        options: [
+            { text: "Convenio Colectivo de Oficinas Técnicas y Estudios de Arquitectura", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo del Sector de la Construcción", correct: false }
+        ]
+    },
+    {
+        company: "Centro de Estética Bella",
+        job: "Esteticista",
+        options: [
+            { text: "Convenio Colectivo de Peluquerías y Estética", correct: true },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Fundación Ayuda Canarias",
+        job: "Trabajador Social",
+        options: [
+            { text: "Convenio Colectivo de Intervención Social", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Plataforma Logística S.L.",
+        job: "Mozo de Almacén",
+        options: [
+            { text: "Convenio Colectivo de Logística y Almacenes", correct: true },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Grupo Hotelero Mediterráneo",
+        job: "Gobernanta",
+        options: [
+            { text: "Convenio Colectivo de Hostelería", correct: true },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Empresa de Transporte Urgente",
+        job: "Repartidor",
+        options: [
+            { text: "Convenio Colectivo de Transporte de Mercancías", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Centro de Investigación Médica Alfa",
+        job: "Investigador Científico",
+        options: [
+            { text: "Convenio Colectivo de Investigación y Desarrollo", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Agencia de Publicidad Creativa",
+        job: "Redactor Publicitario",
+        options: [
+            { text: "Convenio Colectivo de Publicidad", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Productora Audiovisual Visionarios",
+        job: "Editor de Vídeo",
+        options: [
+            { text: "Convenio Colectivo de Producción Audiovisual", correct: true },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Asesoría Jurídica López y Asociados",
+        job: "Abogado",
+        options: [
+            { text: "Convenio Colectivo de Despachos de Abogados", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Taller de Muebles El Roble",
+        job: "Ebanista",
+        options: [
+            { text: "Convenio Colectivo de la Madera", correct: true },
+            { text: "Convenio Colectivo del Metal", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Gimnasio Fuerza y Control",
+        job: "Entrenador Personal",
+        options: [
+            { text: "Convenio Colectivo de Instalaciones Deportivas", correct: true },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Residencia de Ancianos Los Abuelos",
+        job: "Cuidador",
+        options: [
+            { text: "Convenio Colectivo de Atención a Personas Dependientes", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Hostelería", correct: false }
+        ]
+    },
+    {
+        company: "Restaurante Vegano Tierra Verde",
+        job: "Cocinero",
+        options: [
+            { text: "Convenio Colectivo de la Hostelería", correct: true },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Empresa de Telecomunicaciones Altavoz",
+        job: "Técnico de Telecomunicaciones",
+        options: [
+            { text: "Convenio Colectivo de Telecomunicaciones", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Aerolíneas Canarias",
+        job: "Azafata de Vuelo",
+        options: [
+            { text: "Convenio Colectivo de Transporte Aéreo", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Suministros Industriales del Atlántico",
+        job: "Comercial",
+        options: [
+            { text: "Convenio Colectivo de Comercio al Por Mayor", correct: true },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Servicios Informáticos Canarias",
+        job: "Programador",
+        options: [
+            { text: "Convenio Colectivo de Consultoras de Tecnologías de la Información", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Productores Agrícolas Los Verdes",
+        job: "Ingeniero Agrónomo",
+        options: [
+            { text: "Convenio Colectivo del Sector Agrario", correct: true },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Corporación Energética Isla Verde",
+        job: "Técnico en Energías Renovables",
+        options: [
+            { text: "Convenio Colectivo de Energías Renovables", correct: true },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Naviera del Atlántico",
+        job: "Marinero",
+        options: [
+            { text: "Convenio Colectivo del Sector Marítimo", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Minería Nacional S.A.",
+        job: "Minero",
+        options: [
+            { text: "Convenio Colectivo del Sector de la Minería", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Correos y Telégrafos",
+        job: "Cartero",
+        options: [
+            { text: "Convenio Colectivo de Correos", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Parque de Atracciones Isla Mágica",
+        job: "Operador de Atracciones",
+        options: [
+            { text: "Convenio Colectivo de Ocio y Entretenimiento", correct: true },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false }
+        ]
+    },
+    {
+        company: "Centro Médico Santa Elena",
+        job: "Enfermero",
+        options: [
+            { text: "Convenio Colectivo de Sanidad Privada", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Estudio de Fotografía Luminoso",
+        job: "Fotógrafo",
+        options: [
+            { text: "Convenio Colectivo de Artes Gráficas", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    },
+    {
+        company: "Editorial Mundo Literario",
+        job: "Corrector de Textos",
+        options: [
+            { text: "Convenio Colectivo de Editoriales", correct: true },
+            { text: "Convenio Colectivo de Oficinas y Despachos", correct: false },
+            { text: "Convenio Colectivo de Comercio Minorista", correct: false }
+        ]
+    }
 ];
+
 
 // Eventos
 startButton.addEventListener('click', startGame);
