@@ -5,13 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de Convenios Colectivos</title>
     <style>
-        /* Añade tus estilos aquí */
+        /* Puedes añadir tu estilo aquí si lo deseas */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #game-container {
+            padding: 20px;
+        }
+        #choices button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        #restartButton {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
+
     <div id="game-container">
+        <!-- Botón para comenzar el juego -->
         <button id="startButton">Comenzar el Juego</button>
 
+        <!-- Contenedor del juego, inicialmente oculto -->
         <div id="game" style="display: none;">
             <div id="company-info"></div>
             <div id="job-info"></div>
@@ -20,11 +47,13 @@
             <button id="continueButton" style="display: none;">Continuar</button>
         </div>
 
+        <!-- Contenedor de la puntuación -->
         <div id="scoreContainer" style="display: none;">
             <p>Puntuación: <span id="score">0</span></p>
             <p>Tiempo restante: <span id="time">30</span> segundos</p>
         </div>
 
+        <!-- Resultados del juego, inicialmente ocultos -->
         <div id="result" style="display: none;">
             <p id="final-result"></p>
             <p id="final-score"></p>
@@ -33,6 +62,9 @@
         </div>
     </div>
 
+    <!-- Referencia al archivo JavaScript -->
     <script src="script.js"></script>
+
 </body>
 </html>
+
