@@ -8,6 +8,7 @@ const continueButton = document.getElementById('continueButton');
 const resultContainer = document.getElementById('result');
 const finalResult = document.getElementById('final-result');
 const finalScore = document.getElementById('final-score');
+const finalTime = document.getElementById('final-time'); // Mostrar tiempo total
 const timerElement = document.getElementById('time');
 const scoreElement = document.getElementById('score');
 const scoreContainer = document.getElementById('scoreContainer');
@@ -18,6 +19,7 @@ let correctAnswers = 0;
 let score = 0;
 let timeLeft = 30;
 let timerInterval;
+let startTime; // Tiempo de inicio del juego
 
 const cases = [
     {
@@ -494,7 +496,9 @@ function startGame() {
     correctAnswers = 0;
     score = 0;
     scoreElement.textContent = score;
-    
+
+    startTime = new Date(); // Guardamos la hora de inicio
+
     shuffleArray(cases); // Barajar las preguntas
     setNextQuestion();
 }
@@ -559,11 +563,17 @@ function startTimer() {
 }
 
 function endGame() {
+    clearInterval(timerInterval);
     gameContainer.style.display = 'none';
     resultContainer.style.display = 'block';
     restartButton.style.display = 'block';
+
+    const endTime = new Date(); // Guardamos la hora de finalización
+    const totalTime = Math.floor((endTime - startTime) / 1000); // Calculamos el tiempo total en segundos
+
     finalResult.textContent = `¡Juego terminado! Has acertado ${correctAnswers} de ${cases.length} convenios.`;
     finalScore.textContent = `Tu puntuación final es: ${score} puntos.`;
+    finalTime.textContent = `Tiempo total: ${totalTime} segundos.`; // Mostramos el tiempo total
 }
 
 function restartGame() {
