@@ -20,7 +20,6 @@ let timeLeft = 30;
 let timerInterval;
 
 const cases = [
-    // Aquí van los 50 supuestos
     {
         company: "Restaurante La Palma",
         job: "Camarero",
@@ -59,6 +58,7 @@ function startGame() {
     resultContainer.style.display = 'none';
     gameContainer.style.display = 'block';
     scoreContainer.style.display = 'block';
+    restartButton.style.display = 'none'; // Ocultar botón de reinicio al comenzar el juego
     currentQuestionIndex = 0;
     correctAnswers = 0;
     score = 0;
@@ -68,8 +68,9 @@ function startGame() {
 
 function setNextQuestion() {
     resetState();
-    startTimer();
+    startTimer(); // Iniciar el temporizador con cada nueva pregunta
     const currentCase = cases[currentQuestionIndex];
+    console.log(currentCase); // Verificar qué pregunta se está cargando
     companyInfo.textContent = currentCase.company;
     jobInfo.textContent = `Puesto de trabajo: ${currentCase.job}`;
     currentCase.options.forEach(option => {
@@ -125,6 +126,7 @@ function startTimer() {
 function endGame() {
     gameContainer.style.display = 'none';
     resultContainer.style.display = 'block';
+    restartButton.style.display = 'block'; // Mostrar el botón de reinicio
     finalResult.textContent = `¡Juego terminado! Has acertado ${correctAnswers} de ${cases.length} convenios.`;
     finalScore.textContent = `Tu puntuación final es: ${score} puntos.`;
 }
